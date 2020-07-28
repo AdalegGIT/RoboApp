@@ -1,0 +1,20 @@
+ <%= javascript_pack_tag 'robots' %>
+
+<h1>Robots</h1>
+
+<ul id="robot-container" class="list-group list-group-flush robot-box">
+  <% @robots.each do |r| %>
+   <%= render partial: 'robot', locals: {robot: r}%>
+  <% end %>
+</ul>
+
+<aside id="robot-details-container" class="robot-box">
+  <h2>Robot Details</h2>
+  <div id="robot-details">
+    <%#= render 'robot', robot: @robots.first %>
+  </div>
+
+  <div id="robot-creation-container">
+   <%= render partial: "form" %>
+  </div>
+</aside>
